@@ -1,0 +1,64 @@
+@font-face{
+  font-family: "1";
+  src: url("./fonts/nanum.ttf");
+}
+
+@font-face{
+  font-family: "2";
+  src: url("./fonts/namsan.ttf");
+}
+
+@font-face{
+  font-family: "3";
+  src: url("./fonts/jua.ttf");
+}
+
+@font-face{
+  font-family: "4";
+  src: url("./fonts/hangang.ttf");
+}
+
+@font-face{
+  font-family: "5";
+  src: url("./fonts/ALGER.TTF");
+}
+
+@font-face{
+  font-family: "6";
+  src: url("./fonts/ARLRDBD.TTF");
+}
+
+@font-face{
+  font-family: "7";
+  src: url("./fonts/BRADHITC.TTF");
+}
+
+@font-face{
+  font-family: "8";
+  src: url("./fonts/COOPBL.TTF");
+}
+
+@font-face{
+  font-family: "9";
+  src: url("./fonts/GILLUBCD.TTF");
+}
+
+@font-face{
+  font-family: "10";
+  src: url("./fonts/GILSANUB.TTF");
+}
+
+@font-face{
+  font-family: "11";
+  src: url("./fonts/MATURASC.TTF");
+}
+
+@font-face{
+  font-family: "12";
+  src: url("./fonts/OLDENGL.TTF");
+}
+
+@font-face{
+  font-family: "13";
+  src: url("./fonts/RAVIE.TTF");
+}
