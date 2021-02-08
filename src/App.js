@@ -1,9 +1,9 @@
 import React, {Component, useState} from 'react'
-import Lander from './components/Test/Lander';
+import Landing from './Page/Landing';
 
 function App() {
   return (
-    <Lander></Lander>
+    <Landing></Landing>
   );
 }
 
