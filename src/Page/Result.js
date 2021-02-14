@@ -34,48 +34,7 @@ const Desc = styled.h3`
 `;
 
 
-function Result({score}){
-
-  const [num, setNum] = useState(0);
-
-  const resultType = ({score}) =>{
-    var scoreOutgoing = score[0]*0.7 + score[1]*0.3;
-    if (scoreOutgoing>=5) {
-      scoreOutgoing = 'W';
-    }
-    else scoreOutgoing = 'H';
-
-    var scoreSociable = score[2]*0.5 + score[3]*0.3+score[4]*0.2;
-    if (scoreSociable>=5) scoreSociable = 'E';
-    else scoreSociable = 'I';
-
-    var scoreNeat = score[5]*0.6 + score[6]*0.2+score[7]*0.2;
-    if (scoreNeat>=5) scoreNeat = 'S';
-    else scoreNeat = 'D';
-
-    var scoreNight = score[8]*0.6 + score[9]*0.4;
-    if (scoreNight>=5) scoreNight = 'O';
-    else scoreNight = 'C';
-
-    var type = scoreOutgoing +scoreSociable+scoreNeat+scoreNight;
-    
-    TotalresultType({type});
-  }
-
-  const TotalresultType=({type})=>{
-    
-    var TotalType = [
-      'WESO', 'WESC', 'HISO', 'HISC',
-      'WISO', 'WISC', 'HESO', 'HESC',
-      'WIDC', 'WIDO', 'WEDC', 'WEDO',
-      'HIDO', 'HIDO', 'HEDC', 'HEDO'
-    ];
-
-    for(let i=0; i<16; i++){
-      if(TotalType[i]===type) setNum(i);
-      break;
-    }
-  }
+function Result({num}){
 
   const contents = [
     {
@@ -244,7 +203,6 @@ function Result({score}){
 
       return (
         <>
-          {resultType({score})}
           <GlobalStyle/>
             <Title>당신은 {contents[num].result}</Title>
             <Title color='black' fontSize='2rem'>간단한 설명</Title>
