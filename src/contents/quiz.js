@@ -15,15 +15,14 @@ const quiz = [
       'src': night,
       'width': '450',
       'height': '450',
-      'weight': 0.7,
       'answers' :[
         {
           'text': '1. 외박은 안되니 친구의 제안을 거절하고 기숙사로 돌아온다.',
-          score: 8
+          score: 3
         },
         {
           'text': '2. 이 때가 기회라고 생각하고 밤새서 논다.',
-          score: 2
+          score: 7
         }
       ]
     },
@@ -33,7 +32,6 @@ const quiz = [
         'src': study,
         'width': '500',
         'height': '360',
-        'weight': 0.3,
         'answers' :[
           {
             text: '1. 편한게 최고지! 내 방.',
@@ -59,7 +57,6 @@ const quiz = [
         'src': roomie,
         'width': '450',
         'height': '450',
-        'weight': 0.5,
         'answers' :[
           {
             text: '1. "번호가 어떻게 되세요?" 그 자리에서 기숙사 카톡방을 만든다.',
@@ -78,7 +75,6 @@ const quiz = [
         'fontSize': '2.1rem',
         'width': '550',
         'height': '380',
-        'weight': 0.3,
         'answers' :[
           {
             text: '1. 스스럼 없이 룸메이트에게 연락해 먹어도 되는지 물어본다.',
@@ -101,7 +97,6 @@ const quiz = [
         'fontSize': '2.5rem',
         'width': '500',
         'height': '450',
-        'weight': 0.2,
         'answers' :[
           {
             text: '1. "너 오늘 당번인데 어디야?" 바로 분노의 카톡을 한다.',
@@ -119,15 +114,14 @@ const quiz = [
         'src': bed,
         'width': '600',
         'height': '450',
-        'weight': 0.6,
         'answers' :[
           {
             text: '1. 이불은 널브러져 있고 책상엔 쓰레기, 바닥엔 지우개 똥이 한 가득',
-            score: 2
+            score: 3
           },
           {
             text: '2. 잘 개어져 있는 이불, 깔끔한 책상. 바닥엔 먼지 한 톨 없이 깔끔~',
-            score: 8
+            score: 7
           }
         ]
     },
@@ -137,7 +131,6 @@ const quiz = [
         'src': bathroom,
         'width': '630',
         'height': '480',
-        'weight': 0.2,
         'answers' :[
           {
             text: "1. '아 개운하다~' 바로 방으로 들어온다.",
@@ -155,7 +148,6 @@ const quiz = [
         'src': cleaning,
         'width': '680',
         'height': '480',
-        'weight': 0.2,
         'answers' :[
           {
             text: '1. 하루에 한 번은 무조건 돌려야지!',
@@ -173,7 +165,6 @@ const quiz = [
         'src': alarm,
         'width': '500',
         'height': '450',
-        'weight': 0.6,
         'answers' :[
           {
             text: '1. 6시 55분, 6시 56분, 6시 57분… 절대 한 번에 못 일어나!',
@@ -191,7 +182,6 @@ const quiz = [
         'src': phone,
         'width': '600',
         'height': '440',
-        'weight': 0.4,
         'answers' :[
           {
             text: '1. 벌써 잘 시간이네Zzz 조금 쉬다가 한시간 이내로 자야겠다!',

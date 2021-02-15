@@ -22,7 +22,6 @@ const Box = styled.div`
   border-radius: 20px;
   padding: 1px;
   margin: auto;
-
 `
 
 const Title = styled.h1`
@@ -38,7 +37,6 @@ const Button = styled.button`
   /* 기본 스타일 */
   font-family: "jua";
   font-size: 1.8rem;
-
   border-color: black;
   border-width: 4px;
   border-radius: 10px;
@@ -47,12 +45,10 @@ const Button = styled.button`
   top: 20px;
   position: relative;
   margin-bottom: 5px;
-
   /* 크기 */
   height: 65px;
   width: 750px;
   font-weight: 100;
-
   /* 색상 */
   background: #FFF6A9;
   &:hover {
@@ -89,86 +85,57 @@ function Test(){
   const [resultScore, setResultScore] = useState([]);
   const [num, setNum] = useState(0);
 
-  const [outgoing, setOutgoing] = useState(0);
-  const [sociable, setSociable] = useState(0);
-  const [clean, setClean] = useState(0);
-  const [sleep, setSleep] = useState(0);
-
-  const resultType = () =>{
-    let type = '';
-    let TotalType = [
-      'WESO', 'WESC', 'HISO', 'HISC',
-      'WISO', 'WISC', 'HESO', 'HESC',
-      'WIDC', 'WIDO', 'WEDC', 'WEDO',
-      'HIDO', 'HIDO', 'HEDC', 'HEDO'
-    ];
-
-    if (outgoing >= 5) {
-        type = type + 'W';
-    } else {
-        type = type + 'H';
-    }
-
-    //외향 or 내향
-    if (sociable >= 5) {
-        type = type + 'E';
-    } else {
-        type = type + 'I';
-    }
-
-    //청결중요 or 덜중요
-    if (clean >= 5) {
-        type = type + 'S';
-    } else {
-        type = type + 'D';
-    }
-
-    //올빼미 or 이른취침
-    if (sleep >= 5) {
-        type = type + 'O';
-    } else {
-        type = type + 'C';
-    }
-    
-    if (type === 'WESO') setNum(0);
-      else if (type === 'WESC') setNum(1);
-      else if (type === 'HISO') setNum(2);
-      else if (type === 'HISC') setNum(3);
-      else if (type === 'WISO') setNum(4);
-      else if (type === 'WISC') setNum(5);
-      else if (type === 'HESO') setNum(6);
-      else if (type === 'HESC') setNum(7);
-      else if (type === 'WIDC') setNum(8);
-      else if (type === 'WIDO') setNum(9);
-      else if (type === 'WEDC') setNum(10);
-      else if (type === 'WEDO') setNum(11);
-      else if (type === 'HIDC') setNum(12);
-      else if (type === 'HIDO') setNum(13);
-      else if (type === 'HEDC') setNum(14);
-      else if (type === 'HEDO') setNum(15);
-
-    // for(let i=0; i<16; i++){
-    //   if(TotalType[i]===type){
-    //     setNum(num+i);
-    //     break;
-    //   }
-    //}
-  }
-
   const pageUp = (score)=>() => {
 
     setResultScore([...resultScore, score]);
+
     if (page===9){
-      let score1 = resultScore[0]*0.7 + resultScore[1]*0.3;
-      setOutgoing(outgoing+score1);
+      let score1=resultScore[0]*0.7 + resultScore[1]*0.3;
       let score2 = resultScore[2]*0.5 + resultScore[3]*0.3+resultScore[4]*0.2;
-      setSociable(sociable+score2);
       let score3 = resultScore[5]*0.6 + resultScore[6]*0.2+resultScore[7]*0.2;
-      setClean(clean+score3);
       let score4 = resultScore[8]*0.6 + resultScore[9]*0.4;
-      setSleep(sleep+score4);
+
+      let type = ''
+      let TotalType = [
+        'WESO', 'WESC', 'HISO', 'HISC',
+        'WISO', 'WISC', 'HESO', 'HESC',
+        'WIDC', 'WIDO', 'WEDC', 'WEDO',
+        'HIDO', 'HIDO', 'HEDC', 'HEDO'
+      ];
+
+      if (score1 >= 5) {
+        type = type + 'W';
+      } else {
+        type = type + 'H';
+      }
+
+      if (score2 >= 5) {
+          type = type + 'E';
+      } else {
+          type = type + 'I';
+      }
+
+      if (score3 >= 5) {
+          type = type + 'S';
+      } else {
+          type = type + 'D';
+      }
+
+      if (score4 >= 5) {
+          type = type + 'O';
+      } else {
+          type = type + 'C';
+      }
+      console.log(type);
+
+      for(let i=0; i<16; i++){
+        if(TotalType[i]===type){
+        setNum(i);
+        break;
+        }
+      }
       
-      resultType();
+
     }
 
     setPage(page+1);
