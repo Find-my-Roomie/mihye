@@ -1,6 +1,13 @@
 import night from '../components/Test/img/night.jpg';
-import myroom from '../components/Test/img/myroom.jpg';
 import roomie from '../components/Test/img/roomie.jpg';
+import bed from '../components/Test/img/bed.jpg';
+import ramyeon from '../components/Test/img/ramyeon.jpg';
+import alarm from '../components/Test/img/alarm.jpg';
+import study from '../components/Test/img/study.jpg';
+import bathroom from '../components/Test/img/bathroom.jpg';
+import cleaning from '../components/Test/img/cleaning.jpg';
+import trash from '../components/Test/img/trash.jpg';
+import phone from '../components/Test/img/phone.jpg';
 
 const quiz = [
     {
@@ -23,8 +30,8 @@ const quiz = [
 
     {
         'question': '시험기간 중 가장 좋아하는 공부 장소는?',
-        'src': myroom,
-        'width': '700',
+        'src': study,
+        'width': '500',
         'height': '360',
         'weight': 0.3,
         'answers' :[
@@ -67,9 +74,9 @@ const quiz = [
 
     {
         'question': '배가 고프지만 밤 11시라 기숙사 편의점이 문을 닫았다.<br/>거실에는 아직 어색한 룸메이트의 컵라면이 있다.<br/>당신의 행동은?',
-        'src': night,
+        'src': ramyeon,
         'fontSize': '2.1rem',
-        'width': '700',
+        'width': '550',
         'height': '380',
         'weight': 0.3,
         'answers' :[
@@ -90,9 +97,9 @@ const quiz = [
 
     {
         'question': '쓰레기 당번을 잘 안 지키는 룸메가 못마땅한 당신!<br/>이번에도 룸메가 쓰레기를 안치웠다. 당신의 행동은?',
-        'src': night,
+        'src': trash,
         'fontSize': '2.5rem',
-        'width': '450',
+        'width': '500',
         'height': '450',
         'weight': 0.2,
         'answers' :[
@@ -109,8 +116,8 @@ const quiz = [
 
     {
         'question': '볼 일 보고 집에 들어온 당신<br/>눈에 들어온 당신의 방 상태는?',
-        'src': night,
-        'width': '450',
+        'src': bed,
+        'width': '600',
         'height': '450',
         'weight': 0.6,
         'answers' :[
@@ -127,8 +134,8 @@ const quiz = [
 
     {
         'question': '욕실에서 머리를 감은 후 나는...',
-        'src': night,
-        'width': '500',
+        'src': bathroom,
+        'width': '630',
         'height': '480',
         'weight': 0.2,
         'answers' :[
@@ -145,8 +152,8 @@ const quiz = [
 
     {
         'question': '청소기는...',
-        'src': night,
-        'width': '500',
+        'src': cleaning,
+        'width': '680',
         'height': '480',
         'weight': 0.2,
         'answers' :[
@@ -163,8 +170,8 @@ const quiz = [
 
     {
         'question': '내일 아침 7시에 꼭 일어나야 한다.<br/>알람을 어떻게 설정할까?',
-        'src': night,
-        'width': '450',
+        'src': alarm,
+        'width': '500',
         'height': '450',
         'weight': 0.6,
         'answers' :[
@@ -181,9 +188,9 @@ const quiz = [
 
     {
         'question': '할 일을 다 마치고 어느새 시간은 밤 10시.<br/>오늘의 남은 시간 동안 당신은?',
-        'src': night,
-        'width': '450',
-        'height': '450',
+        'src': phone,
+        'width': '600',
+        'height': '440',
         'weight': 0.4,
         'answers' :[
           {

@@ -6,9 +6,6 @@ import Parser from 'html-react-parser';
 import {darken, lighten} from 'polished';
 import Result from '../../Page/Result';
 import quiz from '../../contents/quiz';
-import night from './img/night.jpg';
-import myroom from './img/myroom.jpg';
-import roomie from './img/roomie.jpg';
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -21,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 const Box = styled.div`
   background: white;
   width: 800px;
-  height: 850px;
+  height: 830px;
   border-radius: 20px;
   padding: 1px;
   margin: auto;
