@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, {createGlobalStyle, keyframes} from 'styled-components'
 import index from '../../styles/index.css';
-import progress from './progress.css';
 import Parser from 'html-react-parser';
 import {darken, lighten} from 'polished';
 import Result from '../../Page/Result';
 import quiz from '../../contents/quiz';
+import ProgressBar from './ProgressBar.js';
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -58,32 +58,12 @@ const Button = styled.button`
     background: ${darken(0.1, 'grey')};
 `
 
-const Progress = ({page}) => {
-	const [style, setStyle] = React.useState({});
-	
-	setTimeout(() => {
-		const newStyle = {
-			opacity: 1,
-			width: `${page}%`
-		}
-		
-		setStyle(newStyle);
-	}, 200);
-	
-	return (
-		<div className="progress">
-			<div className="progress-done" style={style}/>
-		</div>
-	)
-}
-
-
 function Test(){
-  
 
   const [page, setPage] = useState(0);
   const [resultScore, setResultScore] = useState([]);
   const [num, setNum] = useState(0);
+  const [turn, setTurn] = useState(0);
 
   const pageUp = (score)=>() => {
 
@@ -103,35 +83,24 @@ function Test(){
         'HIDO', 'HIDO', 'HEDC', 'HEDO'
       ];
 
-      if (score1 >= 5) {
-        type = type + 'W';
-      } else {
-        type = type + 'H';
-      }
+      if (score1 >= 5) type = type + 'W';
+      else type = type + 'H';
+      
 
-      if (score2 >= 5) {
-          type = type + 'E';
-      } else {
-          type = type + 'I';
-      }
+      if (score2 >= 5) type = type + 'E';
+      else type = type + 'I';
 
-      if (score3 >= 5) {
-          type = type + 'S';
-      } else {
-          type = type + 'D';
-      }
-
-      if (score4 >= 5) {
-          type = type + 'O';
-      } else {
-          type = type + 'C';
-      }
-      console.log(type);
+      if (score3 >= 5) type = type + 'S';
+      else type = type + 'D';
+      
+      if (score4 >= 5) type = type + 'O';
+      else type = type + 'C';
+      
 
       for(let i=0; i<16; i++){
         if(TotalType[i]===type){
-        setNum(i);
-        break;
+          setNum(i);
+          break;
         }
       }
       
@@ -139,6 +108,7 @@ function Test(){
     }
 
     setPage(page+1);
+    setTurn(turn+1);
   }
 
     while(page<10){
@@ -146,7 +116,7 @@ function Test(){
         <>
           <GlobalStyle/>
             <Box>
-            <Progress page={(page+1)*10}/>
+            <ProgressBar completed={(page+1)*10} rotation={turn}/>
             <Title fontSize={quiz[page].fontSize}>{Parser(quiz[page].question)}</Title>
                 <img
                     src={quiz[page].src}
@@ -169,9 +139,7 @@ function Test(){
     }
   
   return(
-    <>
-      <Result num={num}></Result>
-    </>
+    <Result num={num}></Result>
   );
     
 
