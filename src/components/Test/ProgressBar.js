@@ -9,16 +9,16 @@ const ProgressBar = (props) => {
       width: '650px',
       backgroundColor: "#e0e0de",
       borderRadius: 50,
-      margin: '30px auto'
+      margin: '30px auto',
     }
   
     const fillerStyles = {
       height: '100%',
       width: `${completed}%`,
-      //background: 'linear-gradient(to left, #126424, #76dfe2)',
-      //boxShadow: '0 3px 3px -5px #a2d8e6, 0 2px 5px #3c7c33',
-      background: 'linear-gradient(to left, #F2709C, #FF9472)',
-      boxShadow: '0 3px 3px -5px #F2709C, 0 2px 5px #F2709C',
+      background: 'linear-gradient(to left, #126424, #76dfe2)',
+      boxShadow: '0 3px 3px -5px #a2d8e6, 0 2px 5px #3c7c33',
+      //background: 'linear-gradient(to left, #F2709C, #FF9472)',
+      //boxShadow: '0 3px 3px -5px #F2709C, 0 2px 5px #F2709C',
       borderRadius: '20px',
       transition: '1s ease 0.005s'
     }

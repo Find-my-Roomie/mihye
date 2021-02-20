@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components'
 import dorm from '../components/Test/img/dorm.jpg';
-import index from '../styles/index.css'
 import resultType from '../contents/resultType';
 
 const GlobalStyle = createGlobalStyle`

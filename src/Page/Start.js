@@ -2,7 +2,6 @@ import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components'
 import {darken, lighten} from 'polished';
 import dorm from '../components/Test/img/dorm.jpg';
-import index from '../styles/index.css'
 
 const GlobalStyle = createGlobalStyle`
   body{

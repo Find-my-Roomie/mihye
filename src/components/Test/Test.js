@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import styled, {createGlobalStyle, keyframes} from 'styled-components'
-import index from '../../styles/index.css';
+import styled, {createGlobalStyle} from 'styled-components'
 import Parser from 'html-react-parser';
 import {darken, lighten} from 'polished';
 import Result from '../../Page/Result';
 import quiz from '../../contents/quiz';
-import ProgressBar from './ProgressBar.js';
+import ProgressBar from './ProgressBar';
+import media from 'react-media';
+
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -22,7 +23,15 @@ const Box = styled.div`
   border-radius: 20px;
   padding: 1px;
   margin: auto;
-`
+  
+  @media (min-width: 320px) and (max-width: 900px) {
+  
+    width: 100%;
+    margin: auto;
+  
+  }
+
+`;
 
 const Title = styled.h1`
   font-family: "jua";
@@ -30,6 +39,19 @@ const Title = styled.h1`
   color: black;
   font-size: ${props => props.fontSize || '2.8rem'};
   font-weight: 300;
+  
+  @media (min-width: 701px) and (max-width: 900px) {
+  
+    font-size: 2.5rem;
+  
+  }
+  
+  @media (min-width: 320px) and (max-width: 700px) {
+  
+  font-size: 2rem;
+  
+  }
+
 `;
 
 const Button = styled.button`
@@ -56,6 +78,19 @@ const Button = styled.button`
   }
   &:active {
     background: ${darken(0.1, 'grey')};
+
+  @media (min-width: 750px) and (max-width: 800px) {
+    width: 500px;
+    font-size: 1.5rem;
+  
+  }
+  
+  @media (min-width: 320px) and (max-width: 700px) {
+    width: 100%
+    font-size: 1rem;
+  
+  }
+
 `
 
 function Test(){
@@ -115,6 +150,7 @@ function Test(){
       return (
         <>
           <GlobalStyle/>
+          <theme>
             <Box>
             <ProgressBar completed={(page+1)*10} rotation={turn}/>
             <Title fontSize={quiz[page].fontSize}>{Parser(quiz[page].question)}</Title>
@@ -133,6 +169,7 @@ function Test(){
                 </Button>
             ))}
             </Box>
+          </theme>
 
         </>
       );
